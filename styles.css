@@ -1,0 +1,48 @@
+
+html,body{
+  height: 100%;
+	background: #333;
+	color:#ccc;
+	font-family: roboto, sans-serif;
+	padding:0;
+	margin:0;
+}
+
+.container {
+  display: flex;
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal (opcional) */
+  height: 100%;
+  /*flex-direction: column;*/
+}
+
+.container div{
+	text-align: center;
+	max-width: 700px;
+}
+
+h1{
+	color:white;
+	font-size:48px;
+}
+
+h2{
+	font-weight: 300;
+	font-size:24px;
+}
+
+img{
+	width: 100%;
+	max-width: 200px;
+}
+
+a{
+	background: #fff;
+	color:#000;
+	display: inline-block;
+	border-radius: 40px;
+	padding: 10px 20px;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+}
