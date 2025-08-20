@@ -1,7 +1,7 @@
 
 html,body{
   	height: 100%;
-	background: #333;
+	background: #202020;
 	color:#ccc;
 	font-family: roboto, sans-serif;
 	padding:0 auto;
@@ -12,18 +12,23 @@ html,body{
   display: flex;
   align-items: center; /* Centrado vertical */
   justify-content: center; /* Centrado horizontal (opcional) */
-  height: 100%;
   /*flex-direction: column;*/
+  padding: 30px;
 }
 
 .container div{
 	text-align: center;
-	max-width: 700px;
+	max-width: 1000px;
+}
+
+.container div *{
+	margin: 30px auto auto;
 }
 
 h1{
 	color:white;
 	font-size:48px;
+	max-width: 700px;
 }
 
 h2{
@@ -33,6 +38,9 @@ h2{
 
 img{
 	width: 100%;
+}
+
+img.logo{
 	max-width: 200px;
 }
 
@@ -45,4 +53,10 @@ a{
 	text-decoration: none;
 	font-size: 16px;
 	font-weight: bold;
+}
+
+.shadow{
+	border-radius: 10px;
+	border:1px solid #666;
+	box-shadow: 10px 5px 50px black;
 }
