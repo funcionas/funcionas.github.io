@@ -21,7 +21,7 @@ html,body{
 	max-width: 1000px;
 }
 
-.container div *{
+.container > div *{
 	margin: 30px auto auto;
 }
 
@@ -31,9 +31,14 @@ h1{
 	max-width: 700px;
 }
 
-h2{
+h2, h3{
 	font-weight: 300;
 	font-size:24px;
+}
+
+p{
+	color:#999;
+	font-size: 16px;
 }
 
 img{
@@ -59,4 +64,19 @@ a{
 	border-radius: 10px;
 	border:1px solid #666;
 	box-shadow: 10px 5px 50px black;
+}
+
+
+.articles-container {
+  display: flex; /* Makes the container a flex container */
+  flex-wrap: wrap; /* Allows articles to wrap to the next line if space is limited */
+  justify-content: space-around; /* Distributes space around items */
+}
+
+article {
+  flex: 1 1 300px; /* Allows articles to grow, shrink, and sets a preferred width */
+  margin: 10px;
+  padding: 15px;
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+  text-align: left;
 }
