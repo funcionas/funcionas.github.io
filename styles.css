@@ -80,6 +80,12 @@ article {
   margin: 10px;
 }
 
+article img{
+	border-radius: 4px;
+	margin-top: 15px;
+	width: 100%;
+}
+
 h1{
 	margin-bottom: 0;
 }
