@@ -1,27 +1,13 @@
 
 html,body{
-  	height: 100%;
 	background: #202020;
 	color:#ccc;
 	font-family: roboto, sans-serif;
-	padding:0 auto;
-	margin:0 auto;
 }
 
 .container {
-  display: flex;
-  align-items: center; /* Centrado vertical */
-  justify-content: center; /* Centrado horizontal (opcional) */
-  /*flex-direction: column;*/
-  padding: 30px;
-}
-
-.container div{
 	text-align: center;
-	max-width: 1000px;
-}
-
-.container > div *{
+	max-width: 1200px;
 	margin: 30px auto auto;
 }
 
@@ -29,6 +15,7 @@ h1{
 	color:white;
 	font-size:48px;
 	max-width: 700px;
+	margin: 50px auto;
 }
 
 h2, h3{
@@ -67,16 +54,37 @@ a{
 }
 
 
+section{
+margin: 50px auto auto;	
+}
+
 .articles-container {
   display: flex; /* Makes the container a flex container */
   flex-wrap: wrap; /* Allows articles to wrap to the next line if space is limited */
   justify-content: space-around; /* Distributes space around items */
+  max-width: 1100px;
+  
 }
 
 article {
   flex: 1 1 300px; /* Allows articles to grow, shrink, and sets a preferred width */
-  margin: 10px;
-  padding: 15px;
+  margin: 0 10px;
+  padding: 0 15px;
   box-sizing: border-box; /* Includes padding and border in the element's total width and height */
   text-align: left;
+
+  border:1px solid #333;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+h1{
+	margin-bottom: 0;
+}
+
+footer{
+	border-top: 1px solid #333;
+	margin: 50px auto auto;
+	padding: 30px;
+
 }
