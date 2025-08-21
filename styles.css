@@ -36,6 +36,11 @@ img.logo{
 	max-width: 200px;
 }
 
+img.logo.small{
+	max-width: 120px;
+	vertical-align: middle;
+}
+
 a{
 	background: #fff;
 	color:#333;
