@@ -3,12 +3,8 @@ html,body{
 	background: #202020;
 	color:#ccc;
 	font-family: roboto, sans-serif;
-}
-
-.container {
 	text-align: center;
-	max-width: 1200px;
-	margin: 30px auto auto;
+	padding: 30px auto;
 }
 
 h1{
@@ -16,7 +12,9 @@ h1{
 	font-size:48px;
 	max-width: 700px;
 	margin: 50px auto;
+	margin-bottom: 0;
 }
+
 
 h2, h3{
 	font-weight: 300;
@@ -26,22 +24,6 @@ h2, h3{
 p{
 	color:#999;
 	font-size: 16px;
-}
-
-img.capture{
-	width: 100%;
-		border-radius: 10px;
-	border:1px solid #666;
-	box-shadow: 10px 5px 50px black;
-}
-
-img.logo{
-	max-width: 200px;
-}
-
-img.logo.small{
-	max-width: 120px;
-	vertical-align: middle;
 }
 
 a{
@@ -55,12 +37,43 @@ a{
 	font-weight: bold;
 }
 
-
-section{
-margin: 50px auto auto;	
+header{
+	margin-top: 60px;
 }
 
-.articles-container {
+
+.logo{
+	width: 100%;
+	max-width: 200px;
+}
+
+.logo.small{
+	width: 100%;
+	max-width: 120px;
+	vertical-align: middle;
+}
+
+.banner{
+	/*background: url('assets/scanner.png')  right bottom no-repeat;
+	background-size: 350px;*/
+
+}
+
+.banner img{
+	width: 100%;
+	max-width: 1200px;
+	border-radius: 10px;
+	border:1px solid #666;
+	box-shadow: 10px 5px 50px black;
+}
+
+
+
+section{
+	margin: 50px auto auto;	
+}
+
+section.articles-container {
   display: flex; /* Makes the container a flex container */
   flex-wrap: wrap; /* Allows articles to wrap to the next line if space is limited */
   justify-content: space-around; /* Distributes space around items */
@@ -80,19 +93,33 @@ article {
   margin: 10px;
 }
 
+
+article i{
+	font-size: 48px;
+	color: #666;
+}
+
 article img{
 	border-radius: 4px;
 	margin-top: 15px;
 	width: 100%;
 }
 
-h1{
-	margin-bottom: 0;
-}
 
 footer{
 	border-top: 1px solid #333;
 	margin: 50px auto auto;
 	padding: 30px;
 
+}
+
+.amarillo{color:#ffeb52}
+.naranja{color:#ff6600}
+.rojo{color:#d33048}
+.violeta{color:#6d24ff}
+.azul{color:#0078d4}
+.verde{color:#5acf8f}
+
+i{
+	color:#666;
 }
