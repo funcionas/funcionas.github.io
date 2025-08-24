@@ -17,6 +17,7 @@ h1{
 
 
 h2{
+	color:#eee;
 	font-weight: 300;
 	font-size:24px;
 }
@@ -54,9 +55,12 @@ header{
 }
 
 .banner{
-	/*background: url('assets/scanner.png')  right bottom no-repeat;
-	background-size: 350px;*/
-
+/*	background: 
+	url('assets/scanner4.png')  right bottom  no-repeat, 
+	url('assets/impresora3.png')  left bottom no-repeat;*/
+	/*background-size: contain;*/
+	/*max-width: 1600px;*/
+	margin: auto;
 }
 
 .banner img{
@@ -100,9 +104,14 @@ article i{
 }
 
 article img{
-	border-radius: 4px;
+/*	border-radius: 4px;
 	margin-top: 15px;
-	width: 100%;
+	width: 100%;*/
+}
+
+.horizontal{
+	display: flex;
+	align-items: center;
 }
 
 
