@@ -103,10 +103,14 @@ article i{
 	color: #666;
 }
 
-article img{
-/*	border-radius: 4px;
-	margin-top: 15px;
-	width: 100%;*/
+article figure{
+	width: 25%;
+	text-align: left !important;
+}
+
+article figure img{
+	width: 100%;
+	max-height: 140px;
 }
 
 .horizontal{
