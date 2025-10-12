@@ -58,7 +58,9 @@ header{
 .banner{
 	margin: auto;
 	/* border-top: 1px solid #ccc; */
-	background: linear-gradient(-40deg, #ffeb52 0, #5bd291 20%, #0078d4 70%, #6d24ff 100%);
+	/* background: linear-gradient(-40deg, #ffeb52 0, #5bd291 20%, #0078d4 70%, #6d24ff 100%);*/
+	background: linear-gradient(0deg, #202020 0%, #333 50%, #202020 100%) ; 
+	/* background: url("assets/bg.png") center  center; */
 	padding: 1px;
 }
 
@@ -91,6 +93,8 @@ article {
   border:1px solid #333;
   border-radius: 4px;
   margin: 10px;
+  background: linear-gradient(-40deg,  #262626 0, #202020 100%);
+  box-shadow: 0 0 10px #141414;
 }
 
 
