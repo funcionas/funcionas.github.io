@@ -59,10 +59,9 @@ header{
 	margin: auto;
 	/* border-top: 1px solid #ccc; */
 	/* background: linear-gradient(-40deg, #ffeb52 0, #5bd291 20%, #0078d4 70%, #6d24ff 100%);*/
-	background: linear-gradient(0deg, #202020 0%, #333 50%, #202020 100%) ; 
-	background: url("assets/bg.png") no-repeat bottom ;
-  background-size: contain; /* Adjusts the image size to cover the element */
-   background-blend-mode: lighten;
+	background: linear-gradient(0deg, #202020 0%, #262626 50%, #202020 100%) ; 
+	/* background: url("assets/bg.png") no-repeat bottom ;
+  background-size: contain; Adjusts the image size to cover the element */
 }
 
 .banner img{
