@@ -66,9 +66,9 @@ header{
 .banner img{
 	width: 100%;
 	max-width: 1200px;
-	border-radius: 10px;
+	/* border-radius: 10px;
 	border:1px solid #666;
-	box-shadow: 10px 5px 50px black;
+	box-shadow: 10px 5px 50px black; */
 }
 
 
