@@ -5,6 +5,7 @@ html,body{
 	font-family: roboto, sans-serif;
 	text-align: center;
 	padding: 30px auto;
+	margin: 0;
 }
 
 h1{
@@ -39,7 +40,7 @@ a{
 }
 
 header{
-	margin-top: 60px;
+	margin: 30px;
 }
 
 
@@ -55,12 +56,10 @@ header{
 }
 
 .banner{
-/*	background: 
-	url('assets/scanner4.png')  right bottom  no-repeat, 
-	url('assets/impresora3.png')  left bottom no-repeat;*/
-	/*background-size: contain;*/
-	/*max-width: 1600px;*/
 	margin: auto;
+	/* border-top: 1px solid #ccc; */
+	background: linear-gradient(-40deg, #ffeb52 0, #5bd291 20%, #0078d4 70%, #6d24ff 100%);
+	padding: 1px;
 }
 
 .banner img{
