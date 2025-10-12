@@ -61,7 +61,6 @@ header{
 	/* background: linear-gradient(-40deg, #ffeb52 0, #5bd291 20%, #0078d4 70%, #6d24ff 100%);*/
 	background: linear-gradient(0deg, #202020 0%, #333 50%, #202020 100%) ; 
 	/* background: url("assets/bg.png") center  center; */
-	padding: 1px;
 }
 
 .banner img{
