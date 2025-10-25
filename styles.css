@@ -43,6 +43,11 @@ header{
 	margin: 30px;
 }
 
+img{
+	width: 100%;
+	max-width: 500px;
+}
+
 
 .logo{
 	width: 100%;
