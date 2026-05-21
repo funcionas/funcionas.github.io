@@ -52,6 +52,8 @@ img{
 .logo{
 	width: 100%;
 	max-width: 180px;
+	margin-left: -54px;
+	clip-path: inset(0 0 0 30%);
 }
 
 .logo.small{
@@ -59,6 +61,17 @@ img{
 	max-width: 120px;
 	vertical-align: middle;
 }
+
+.spinner{
+	width: 48px;
+	animation: logo-rotate 10s linear infinite;
+}
+
+@keyframes logo-rotate {
+   0% {   transform: rotate(0deg);}
+  100% { transform: rotate(1turn); }
+}
+
 
 .banner{
 	margin: auto;
