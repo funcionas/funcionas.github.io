@@ -101,8 +101,8 @@ nav {
 }
 
 .image-container img {
-    width: 145%;
-    max-width: 620px;
+    width: 100%;
+    max-width: 580px;
     height: auto;
     display: block;
     transform: scale(1.2);
