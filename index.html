@@ -1,111 +1,454 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
+    <meta charset="UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Funcionas Software</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="icon" href="assets/icon.ico" type="image/x-icon">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-    <header>
-        <img src="assets/icon.png" alt="Funcionas" class="spinner" />
-        <img src="assets/Funcionas.svg" alt="Funcionas" class="logo" />
+
+    <header class="main-header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="#"><img src="assets/Funcionas.svg" alt="Funcionas" class="logo" /></a>
+                </div>
+                <div class="menu">
+                    <a href="#funciones">Funciones</a>
+                    <a href="#precios">Planes</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#" class="open-contact">Contacto</a>
+                </div>
+                <a class="btn btn-primary open-contact" href="#">Probar gratis <span
+                        class="material-icons">arrow_forward</span></a>
+            </nav>
+        </div>
     </header>
 
-    <section class="banner">
-        <h1>Desarrollamos el software que tu negocio necesita</h1>
-        <h2>Un punto de venta moderno, simple y accesible.<h2>
-        <img src="assets/Image2.png" class="capture" />
-    </section>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div>
+                    <div class="badge"><span class="material-icons">check_circle</span> Instalación sin cargo</div>
 
+                    <h1>Todo listo para empezar a vender.</h1>
+                    <p class="lead">Conocé nuestro sistema y comenzá a gestionar tu negocio de la manera más facil.</p>
 
-    <section>
-        <h1>Con las características que te hacen falta</h1>
-        <div class="articles-container">
-            <article style="border-color: #ffeb5250;">
+                    <div class="cta">
+                        <a class="btn btn-primary open-contact" href="#">Probar gratis 14 días <span
+                                class="material-icons">arrow_forward</span></a>
+                        <a class="btn btn-secondary" href="#" id="open-demo"><span
+                                class="material-icons">play_circle</span> Ver demo</a>
+                    </div>
 
-                <h2>Facturación Electrónica</h2>
-                <p>Facturá al instante a través de los servicios web de ARCA. Emití tickets detallados, presupuestos y
-                    comprobantes fiscales, facturas, notas de crédito y débito.</p>
-            </article>
-            <article style="border-color: #5bd29150;">
+                    <div class="features">
+                        <span><span class="material-icons">verified</span> ARCA integrado</span>
+                        <span><span class="material-icons">wifi_off</span> Sin conexión</span>
+                        <span><span class="material-icons">support_agent</span> Soporte Perzonalizado</span>
+                    </div>
+                </div>
 
-                <h2>Control de Stock</h2>
-                <p>Cargá tu catálogo de productos y controlá tu stock de la manera más sencilla.</p>
-            </article>
-            <article style="border-color: #0078d450;">
-                <h2>Gestión de Clientes</h2>
-                <p>Mantené un registro de tus clientes fácil de actualizar y consultar.</p>
-            </article>
-            <article style="border-color: #6d24ff50;">
-                <h2>Descuentos y Promociones</h2>
-                <p>Administrá descuentos y promociones desde tu catálogo de productos o tu orden de compra.</p>
-            </article>
-            <article style="border-color: #d3304850;">
-                <h2>Listas de Precios</h2>
-                <p>Creá todas las listas de precios que necesites y cambia de lista con un solo click.</p>
-            </article>
-            <article style="border-color: #ff660050;">
-                <h2>Informes</h2>
-                <p>Consultá el estado en tiempo real de tus ventas, facturación, stock y más. Descargá lo que necesites en Excel.</p>
-            </article>
+                <div class="image-container">
+                    <img src="assets/Image3.png" alt="Sistema">
+                </div>
+            </div>
         </div>
     </section>
 
-<!--     <section class="banner">
-        <h1>Desde cualquier lugar *</h1>
-        <img src="assets/phone2.png" alt="">
-    </section>
-    <p>* Disponible con la suscripción al servicio de nube.</p>
- -->
+    <main class="container">
 
-    <section>
-        <h1>Siempre funcionando</h1>
-       
-        <div class="articles-container">
-            <article>
-                <h2>Modo Offline <span style="color:gray; font-size: 80%;">(Licencia Básica)</span></h2>
-                <p>Con el sistema instalado en una unica computadora, no tenes costos adicionales. Solo necesitás internet para facturar, todo lo demas estara disponible incluso sin conexión.</p>
-            </article>
-            <article>
-                <h2>Modo Nube <span style="color:gray; font-size: 80%;">(Suscripción)</span> 
-                    <span class="badge">Próximamente</span></h2>
-                <p>Si necesitás múltiples cajas o si querés consultar el estado de tus ventas desde tu
-                    dispositivo móvil vas a poder hacerlo con la sincronización en la nube.</p>
-            </article>
-            
-        </div> 
-    </section>
+        <section>
+            <div class="card two-col">
+                <div>
+                    <h2>Vendé</h2>
+                    <p>Registrá ventas en segundos. Escaneá productos, aplicá descuentos y emití tickets al instante.
+                    </p>
+                </div>
+                <div><img src="assets/vende.png"></div>
+            </div>
 
+            <div class="card two-col">
+                <div><img src="assets/stock.png"></div>
+                <div>
+                    <h2>Controlá tu stock</h2>
+                    <p>Gestioná entradas y salidas en tiempo real. Siempre sabés qué tenés disponible.</p>
+                </div>
+            </div>
 
-    <section>
-        <h1>Estamos para ayudarte</h1>
-        <p>Te brindamos atención personalizada y soporte técnico para que saques el máximo provecho de nuestro software.
-        </p>
-        <p>
-            <a href="mailto:funcionas@outlook.com">Contactate para obtener una prueba gratuita</a>
-        </p>
-    </section>
+            <div class="card two-col">
+                <div>
+                    <h2>Facturá sin complicaciones</h2>
+                    <p>Facturas A, B o C integradas con ARCA en un solo clic.</p>
+                </div>
+                <div><img src="assets/factura.png"></div>
+            </div>
+        </section>
+
+        <section id="funciones" class="more-features-section">
+            <h2 class="more-features-title">Todo lo que tu negocio necesita</h2>
+            <p class="more-features-subtitle">Herramientas diseñadas para hacer tu día a día más simple y ordenado.</p>
+            <div class="more-features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper purple">
+                        <span class="material-icons">receipt_long</span>
+                    </div>
+                    <h3>Factura Electrónica</h3>
+                    <p>Emití facturas A, B o C conectado a ARCA de forma 100% online.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper blue">
+                        <span class="material-icons">inventory_2</span>
+                    </div>
+                    <h3>Control de Inventario</h3>
+                    <p>Gestioná tu stock en tiempo real y evitá faltantes o excesos.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper green">
+                        <span class="material-icons">local_offer</span>
+                    </div>
+                    <h3>Listas de Precios</h3>
+                    <p>Creá y administrá múltiples listas de precios de forma ágil y flexible.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper orange">
+                        <span class="material-icons">groups</span>
+                    </div>
+                    <h3>Clientes</h3>
+                    <p>Organizá tu base de clientes y llevá un historial de compras.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper red">
+                        <span class="material-icons">percent</span>
+                    </div>
+                    <h3>Descuentos</h3>
+                    <p>Aplicá descuentos por producto o en toda la compra.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper indigo">
+                        <span class="material-icons">view_week</span>
+                    </div>
+                    <h3>Etiquetas</h3>
+                    <p>Imprimí etiquetas con códigos de barra para tus productos.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper sky-blue">
+                        <span class="material-icons">trending_up</span>
+                    </div>
+                    <h3>Informes</h3>
+                    <p>Tomá mejores decisiones con reportes y estadísticas claras.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper emerald">
+                        <span class="material-icons">cloud_download</span>
+                    </div>
+                    <h3>Exportá y más</h3>
+                    <p>Exportá tus datos a Excel y seguí creciendo con nuevas funciones.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="dark-band">
+                <h3>
+                    <span class="material-icons dark-band-icon">wifi_off</span>
+                    Disponible sin conexión
+                </h3>
+                <h2>
+                    Internet se corta.<br> <span class="gradient-text">Tu negocio sigue funcionando.</span>
+                </h2>
+                <p>Podés seguir vendiendo, controlando stock e imprimiendo tickets. Cuando vuelva Internet, facturas y
+                    todo se sincroniza.</p>
+            </div>
+        </section>
+
+        <section id="precios" class="pricing-section">
+            <h2 class="pricing-title">Planes</h2>
+            <p class="pricing-subtitle">Elegí la opción que mejor se adapte al tamaño de tu negocio.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <span class="pricing-badge">Licencia única</span>
+                        <h3>Starter</h3>
+                        <p class="pricing-desc">Instalado en tu computadora. Todo lo que necesitás para vender sin
+                            comisiones ni costos mensuales.</p>
+                        <!-- <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount">350.000</span>
+                            <span class="period">pago único</span>
+                        </div> -->
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="material-icons text-green">check</span> Mínima Inversión</li>
+                        <li><span class="material-icons text-green">check</span> Licencia permanente para 1 PC</li>
+                        <li><span class="material-icons text-green">check</span> Punto de venta sin conexión</li>
+                        <li><span class="material-icons text-green">check</span> Facturación electrónica ARCA</li>
+                        <li><span class="material-icons text-green">check</span> Control de stock y clientes</li>
+                        <li><span class="material-icons text-green">check</span> Soporte técnico de instalación</li>
+                    </ul>
+                    <div class="pricing-action">
+                        <a class="btn btn-primary open-contact" href="#">Probar gratis 14 días</a>
+                    </div>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-header">
+                        <span class="pricing-badge gradient-badge">Suscripción</span>
+                        <h3>Cloud</h3>
+                        <p class="pricing-desc">Para negocios que necesitan controlar múltiples cajas o sucursales.</p>
+                        <!-- <div class="pricing-price">
+                            <span class="amount text-consult">A consultar</span>
+                        </div> -->
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="material-icons text-indigo">check</span> Múltiples PCs y cajas en simultáneo
+                        </li>
+                        <!-- <li><span class="material-icons text-indigo">check</span> Acceso desde móvil, tablet y PC</li> -->
+                        <li><span class="material-icons text-indigo">check</span> Sincronización en la nube en tiempo
+                            real</li>
+                        <li><span class="material-icons text-indigo">check</span> Actualizaciones y soporte prioritario
+                        </li>
+                        <li><span class="material-icons text-indigo">check</span> Presupuestado según el tamaño de tu
+                            negocio
+                        </li>
+                    </ul>
+                    <div class="pricing-action">
+                        <a class="btn btn-secondary open-contact" href="#">Consultar plan</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq-section">
+            <h2 class="faq-title">Preguntas frecuentes</h2>
+            <div class="faq-container">
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>¿El sistema requiere internet para funcionar?</span>
+                        <span class="material-icons faq-icon">expand_more</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>No, podés registrar ventas, controlar stock e imprimir tickets sin conexión a internet. Solo
+                            necesitás conexión para la facturación electrónica con ARCA y para sincronizar tus datos si
+                            usás la versión en la nube.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>¿Cómo se realiza la instalación y configuración inicial?</span>
+                        <span class="material-icons faq-icon">expand_more</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Nosotros nos encargamos de todo. Te ayudamos a instalar el sistema, configurar tu ticketera y
+                            tu factura electronica sin costo adicional para que empieces a vender de inmediato.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>¿Está integrado con la facturación de ARCA?</span>
+                        <span class="material-icons faq-icon">expand_more</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Sí, podés emitir facturas electrónicas A, B o C integradas directamente con ARCA en un solo
+                            clic, cumpliendo con todas las normativas fiscales vigentes.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>¿Qué tipo de soporte técnico ofrecen?</span>
+                        <span class="material-icons faq-icon">expand_more</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Ofrecemos soporte personalizado y directo por WhatsApp, además de asistencia remota inmediata
+                            para solucionar cualquier inconveniente de manera rápida y sin complicaciones.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- <section class="steps-section">
+            <div class="steps-card">
+                <h2 class="steps-title">Empezar es muy fácil</h2>
+                <div class="steps-row">
+                    <div class="step-item">
+                        <span class="step-number">1</span>
+                        <span class="material-icons step-icon">forum</span>
+                        <h3>Nos contactás</h3>
+                        <p>Contanos sobre tu negocio y qué necesitás.</p>
+                    </div>
+                    <span class="material-icons step-arrow" aria-hidden="true">chevron_right</span>
+                    <div class="step-item">
+                        <span class="step-number">2</span>
+                        <span class="material-icons step-icon">download</span>
+                        <h3>Instalamos el sistema</h3>
+                        <p>Te ayudamos a instalarlo y dejarlo todo listo.</p>
+                    </div>
+                    <span class="material-icons step-arrow" aria-hidden="true">chevron_right</span>
+                    <div class="step-item">
+                        <span class="step-number">3</span>
+                        <span class="material-icons step-icon">sell</span>
+                        <h3>Empezás a vender</h3>
+                        <p>Listo para facturar y gestionar tu negocio desde el primer día.</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="cta-section">
+            <div class="final">
+                <div class="final-headline">
+                    <h2>Probálo gratis durante 14 días</h2>
+                </div>
+                <ul class="final-benefits">
+                    <li><span class="material-icons">check_circle</span> Instalación sin cargo</li>
+                    <li><span class="material-icons">check_circle</span> Te ayudamos a empezar</li>
+                    <li><span class="material-icons">check_circle</span> Soporte personalizado</li>
+                </ul>
+                <div class="final-action">
+                    <a class="btn btn-white open-contact" href="#">Comenzar ahora <span
+                            class="material-icons">arrow_forward</span></a>
+                    <p class="final-disclaimer">Sin tarjeta. Sin compromiso.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
-        <img src="assets/icon.png" alt="Funcionas" class="spinner small" />
-        <img src="assets/Funcionas.svg" alt="Funcionas" class="logo small" />
-        <p><small> © 2025 Funcionas, Ciudad Autónoma de Buenos Aires, Argentina. </small></p>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="assets/Funcionas.svg" alt="Funcionas" class="logo" />
+                </div>
+                <p>El sistema de gestión pensado para pequeños comercios y emprendedores.</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#Funciones">Funciones</a></li>
+                    <li><a href="#precios">Planes</a></li>
+                    <li><a href="#faq">Preguntas frecuentes</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <ul>
+                    <!-- <li>
+                        <a href="https://wa.me/" target="_blank" rel="noopener">
+                            <span class="material-icons">chat</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <a href="mailto:hola@funcionas.com.ar">
+                            <span class="material-icons">mail</span> hola@funcionas.com.ar
+                        </a>
+                    </li>-->
+                    <li><a href="#" class="open-contact">
+                            <span class="material-icons">mail</span>
+                            Escribinos</a></li>
+                    <li>
+                        <span class="material-icons">location_on</span> Ciudad Autónoma de Buenos Aires
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Funcionas. Todos los derechos reservados.</p>
+        </div>
     </footer>
-            
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SV12XK29J9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-SV12XK29J9');
-    </script>
-            
+
+    <div class="modal" id="contact-modal" aria-hidden="true" role="dialog" aria-labelledby="contact-modal-title">
+        <div class="modal-backdrop" data-modal-close></div>
+        <div class="modal-panel modal-panel--form">
+            <button class="modal-close" type="button" aria-label="Cerrar" data-modal-close>
+                <span class="material-icons">close</span>
+            </button>
+            <div id="contact-form-wrap">
+                <h2 id="contact-modal-title">Solicitá tu prueba gratuita</h2>
+                <p class="modal-lead">Completá el formulario y te contactamos para instalar Funcionas sin cargo.</p>
+                <form class="contact-form" id="contact-form" action="https://formsubmit.co/funcionas@outlook.com"
+                    method="POST">
+                    <input type="hidden" name="_subject" value="Nueva solicitud de prueba - Funcionas">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off">
+                    <div class="form-row">
+                        <label class="form-field">
+                            <span>Nombre</span>
+                            <input type="text" name="nombre" required placeholder="Tu nombre">
+                        </label>
+                        <label class="form-field">
+                            <span>Email</span>
+                            <input type="email" name="email" required placeholder="tu@email.com">
+                        </label>
+                    </div>
+                    <div class="form-row">
+                        <label class="form-field">
+                            <span>Teléfono</span>
+                            <input type="tel" name="telefono" placeholder="11 1234-5678">
+                        </label>
+                        <label class="form-field">
+                            <span>Negocio</span>
+                            <input type="text" name="negocio" placeholder="Nombre de tu comercio">
+                        </label>
+                    </div>
+                    <label class="form-field">
+                        <span>Mensaje</span>
+                        <textarea name="mensaje" rows="4"
+                            placeholder="Contanos qué necesitás para tu negocio"></textarea>
+                    </label>
+                    <button class="btn btn-primary btn-submit" type="submit">
+                        Enviar solicitud <span class="material-icons">send</span>
+                    </button>
+                </form>
+            </div>
+            <div class="form-success" id="contact-success" hidden>
+                <span class="material-icons form-success-icon">check_circle</span>
+                <h2>¡Solicitud enviada!</h2>
+                <p>Gracias por contactarnos. Te escribimos a la brevedad para coordinar la instalación.</p>
+                <button class="btn btn-primary" type="button" data-modal-close>Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="demo-modal" aria-hidden="true" role="dialog" aria-labelledby="demo-modal-title">
+        <div class="modal-backdrop" data-modal-close></div>
+        <div class="modal-panel">
+            <button class="modal-close" type="button" aria-label="Cerrar" data-modal-close>
+                <span class="material-icons">close</span>
+            </button>
+            <h2 id="demo-modal-title">Demos</h2>
+            <p class="modal-lead">Un recorrido rápido por el sistema de punto de venta.</p>
+            <div class="modal-demo">
+                <img src="assets/demo_redondeo.gif" alt="Demo de redondeo en Funcionas">
+            </div>
+            <p class="modal-caption">Aplica descuentos sobre el total de la compra.</p>
+        </div>
+    </div>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
+        <span class="material-icons">arrow_upward</span>
+    </button>
+
+    <script src="main.js"></script>
+
 </body>
+
 </html>

@@ -1,4 +1,8 @@
 
+html {
+	scroll-behavior: smooth;
+}
+
 html,body{
 	background: #202020;
 	color:#ccc;
@@ -37,6 +41,12 @@ a{
 	text-decoration: none;
 	font-size: 16px;
 	font-weight: bold;
+}
+
+a .material-icons{
+	font-size: 20px;
+	vertical-align: middle;
+	margin-right: 6px;
 }
 
 header{
@@ -127,9 +137,10 @@ article {
 }
 
 
-article i{
+article .material-icons{
 	font-size: 48px;
 	color: #666;
+	margin-bottom: 8px;
 }
 
 article figure{
@@ -189,6 +200,6 @@ footer{
 	opacity: 0.9;
 }
 
-i{
-	color:#666;
+.material-icons{
+	vertical-align: middle;
 }
