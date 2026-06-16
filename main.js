@@ -95,6 +95,48 @@
         });
     });
 
+    // Mobile hamburger menu / drawer
+    const hamburger = document.getElementById('nav-hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const drawerBackdrop = document.getElementById('mobile-drawer-backdrop');
+    const drawerClose = document.getElementById('mobile-drawer-close');
+
+    function openMobileMenu() {
+        mobileMenu.classList.add('is-open');
+        mobileMenu.setAttribute('aria-hidden', 'false');
+        hamburger.setAttribute('aria-expanded', 'true');
+        hamburger.querySelector('.material-icons').textContent = 'close';
+        document.body.classList.add('modal-open');
+    }
+
+    function closeMobileMenu() {
+        mobileMenu.classList.remove('is-open');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.querySelector('.material-icons').textContent = 'menu';
+        document.body.classList.remove('modal-open');
+    }
+
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', function () {
+            mobileMenu.classList.contains('is-open') ? closeMobileMenu() : openMobileMenu();
+        });
+
+        if (drawerClose) drawerClose.addEventListener('click', closeMobileMenu);
+        if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeMobileMenu);
+
+        // Close when a nav link is clicked
+        mobileMenu.querySelectorAll('.mobile-menu-link').forEach(function (link) {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
+                closeMobileMenu();
+            }
+        });
+    }
+
     // Sticky Header Scroll Listener
     const header = document.querySelector('.main-header');
     if (header) {

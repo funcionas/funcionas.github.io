@@ -27,7 +27,35 @@
                 </div>
                 <a class="btn btn-primary open-contact" href="#">Probar gratis <span
                         class="material-icons">arrow_forward</span></a>
+                <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menú" aria-expanded="false"
+                    aria-controls="mobile-menu">
+                    <span class="material-icons">menu</span>
+                </button>
             </nav>
+
+            <!-- Mobile drawer -->
+            <div class="mobile-drawer" id="mobile-menu" aria-hidden="true" role="dialog"
+                aria-label="Menú de navegación">
+                <div class="mobile-drawer-backdrop" id="mobile-drawer-backdrop"></div>
+                <div class="mobile-drawer-panel">
+                    <div class="mobile-drawer-header">
+                        <img src="assets/Funcionas.svg" alt="Funcionas" class="mobile-drawer-logo" />
+                        <button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Cerrar menú">
+                            <span class="material-icons">close</span>
+                        </button>
+                    </div>
+                    <nav class="mobile-drawer-nav">
+                        <a href="#funciones" class="mobile-menu-link">Funciones</a>
+                        <a href="#precios" class="mobile-menu-link">Planes</a>
+                        <a href="#faq" class="mobile-menu-link">FAQ</a>
+                        <a href="#" class="mobile-menu-link open-contact">Contacto</a>
+                    </nav>
+                    <div class="mobile-drawer-footer">
+                        <a class="btn btn-primary open-contact mobile-menu-cta" href="#">Probar gratis <span
+                                class="material-icons">arrow_forward</span></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
