@@ -224,6 +224,46 @@
         prevBtn.addEventListener('click', function () { if (current > 0) goTo(current - 1); });
         nextBtn.addEventListener('click', function () { if (current < total - 1) goTo(current + 1); });
 
+        // Touch / swipe support
+        var touchStartX = 0;
+        var touchDeltaX = 0;
+        var isDragging = false;
+
+        track.addEventListener('touchstart', function (e) {
+            touchStartX = e.touches[0].clientX;
+            touchDeltaX = 0;
+            isDragging = true;
+            // Pause transition while dragging for live-follow feel
+            track.style.transition = 'none';
+        }, { passive: true });
+
+        track.addEventListener('touchmove', function (e) {
+            if (!isDragging) return;
+            touchDeltaX = e.touches[0].clientX - touchStartX;
+            var base = -(current * 100);
+            var offset = (touchDeltaX / track.offsetWidth) * 100;
+            // Add resistance at the edges
+            if ((current === 0 && touchDeltaX > 0) || (current === total - 1 && touchDeltaX < 0)) {
+                offset = offset * 0.25;
+            }
+            track.style.transform = 'translateX(' + (base + offset) + '%)';
+        }, { passive: true });
+
+        track.addEventListener('touchend', function () {
+            if (!isDragging) return;
+            isDragging = false;
+            track.style.transition = '';
+
+            var threshold = track.offsetWidth * 0.2; // 20% of width to trigger slide
+            if (touchDeltaX < -threshold && current < total - 1) {
+                goTo(current + 1);
+            } else if (touchDeltaX > threshold && current > 0) {
+                goTo(current - 1);
+            } else {
+                goTo(current); // snap back
+            }
+        });
+
         // Reset / jump to target slide when modal opens
         const demoModal = document.getElementById('demo-modal');
         if (demoModal) {
