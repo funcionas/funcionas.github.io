@@ -97,6 +97,7 @@
                     <h2>Vendé</h2>
                     <p>Registrá ventas en segundos. Escaneá productos, aplicá descuentos y emití tickets al instante.
                     </p>
+                    <a href="#" class="open-demo card-demo-link" data-slide="0">Aprendé cómo <span class="material-icons">play_circle</span></a>
                 </div>
                 <div><img src="assets/vende.png"></div>
             </div>
@@ -106,6 +107,7 @@
                 <div>
                     <h2>Controlá tu stock</h2>
                     <p>Gestioná entradas y salidas en tiempo real. Siempre sabés qué tenés disponible.</p>
+                    <a href="#" class="open-demo card-demo-link" data-slide="1">Aprendé cómo <span class="material-icons">play_circle</span></a>
                 </div>
             </div>
 
@@ -113,6 +115,7 @@
                 <div>
                     <h2>Facturá sin complicaciones</h2>
                     <p>Facturas A, B o C integradas con ARCA en un solo clic.</p>
+                    <a href="#" class="open-demo card-demo-link" data-slide="2">Aprendé cómo <span class="material-icons">play_circle</span></a>
                 </div>
                 <div><img src="assets/factura.png"></div>
             </div>
@@ -464,10 +467,39 @@
             </button>
             <h2 id="demo-modal-title">Demos</h2>
             <p class="modal-lead">Un recorrido rápido por el sistema de punto de venta.</p>
-            <div class="modal-demo">
-                <img src="assets/demo_redondeo.gif" alt="Demo de redondeo en Funcionas">
+
+            <div class="demo-slider" id="demo-slider">
+                <!-- Slides -->
+                <div class="demo-slider-track" id="demo-slider-track">
+                    <div class="demo-slide" data-caption="Escaneá productos y registrá ventas en segundos.">
+                        <img src="assets/demo_redondeo.gif" alt="Demo redondeo de precios">
+                    </div>
+                    <div class="demo-slide" data-caption="Controla tu stock.">
+                        <img src="assets/demo_redondeo.gif" alt="Demo punto de venta">
+                    </div>
+                    <div class="demo-slide" data-caption="Emití facturas electrónicas A, B o C con un clic.">
+                        <img src="assets/demo_redondeo.gif" alt="Demo facturación">
+                    </div>
+                </div>
+
+                <!-- Hover zones -->
+                <div class="demo-hover-zone demo-hover-zone--prev"></div>
+                <div class="demo-hover-zone demo-hover-zone--next"></div>
+
+                <!-- Arrows -->
+                <button class="demo-arrow demo-arrow--prev" id="demo-prev" aria-label="Anterior">
+                    <span class="material-icons">chevron_left</span>
+                </button>
+                <button class="demo-arrow demo-arrow--next" id="demo-next" aria-label="Siguiente">
+                    <span class="material-icons">chevron_right</span>
+                </button>
             </div>
-            <p class="modal-caption">Aplica descuentos sobre el total de la compra.</p>
+
+            <!-- Caption -->
+            <p class="modal-caption" id="demo-caption"></p>
+
+            <!-- Dots -->
+            <div class="demo-dots" id="demo-dots" role="tablist" aria-label="Slides de demo"></div>
         </div>
     </div>
 

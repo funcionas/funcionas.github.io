@@ -38,6 +38,19 @@
     }
 
     initModal('demo-modal', [document.getElementById('open-demo')]);
+
+    // Card "Aprendé cómo" links — open demo modal at a specific slide
+    document.querySelectorAll('.card-demo-link').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            var slideIndex = parseInt(link.dataset.slide, 10) || 0;
+            // Store target slide so the slider can pick it up on open
+            document.getElementById('demo-modal').dataset.targetSlide = slideIndex;
+            // Re-use the existing open-demo trigger flow
+            document.getElementById('open-demo').click();
+        });
+    });
+
     initModal('contact-modal', document.querySelectorAll('.open-contact'));
 
     document.addEventListener('keydown', function (e) {
@@ -166,4 +179,64 @@
             });
         });
     }
+    // Demo Slider
+    (function () {
+        const track = document.getElementById('demo-slider-track');
+        const dotsContainer = document.getElementById('demo-dots');
+        const caption = document.getElementById('demo-caption');
+        const prevBtn = document.getElementById('demo-prev');
+        const nextBtn = document.getElementById('demo-next');
+
+        if (!track) return;
+
+        const slides = Array.from(track.querySelectorAll('.demo-slide'));
+        const total = slides.length;
+        let current = 0;
+
+        // Build dots
+        slides.forEach(function (slide, i) {
+            const dot = document.createElement('button');
+            dot.className = 'demo-dot' + (i === 0 ? ' is-active' : '');
+            dot.setAttribute('role', 'tab');
+            dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+            dot.addEventListener('click', function () { goTo(i); });
+            dotsContainer.appendChild(dot);
+        });
+
+        function getDots() {
+            return Array.from(dotsContainer.querySelectorAll('.demo-dot'));
+        }
+
+        function goTo(index) {
+            current = index;
+            track.style.transform = 'translateX(-' + (current * 100) + '%)';
+
+            getDots().forEach(function (dot, i) {
+                dot.classList.toggle('is-active', i === current);
+            });
+
+            caption.textContent = slides[current].dataset.caption || '';
+
+            prevBtn.disabled = current === 0;
+            nextBtn.disabled = current === total - 1;
+        }
+
+        prevBtn.addEventListener('click', function () { if (current > 0) goTo(current - 1); });
+        nextBtn.addEventListener('click', function () { if (current < total - 1) goTo(current + 1); });
+
+        // Reset / jump to target slide when modal opens
+        const demoModal = document.getElementById('demo-modal');
+        if (demoModal) {
+            new MutationObserver(function () {
+                if (demoModal.classList.contains('is-open')) {
+                    var target = parseInt(demoModal.dataset.targetSlide, 10);
+                    goTo(isNaN(target) ? 0 : target);
+                    delete demoModal.dataset.targetSlide;
+                }
+            }).observe(demoModal, { attributes: true, attributeFilter: ['class'] });
+        }
+
+        goTo(0);
+    }());
+
 })();
